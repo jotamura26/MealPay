@@ -19,7 +19,8 @@ public class Transaction{
     }
 
     public String toString(){
-        
-    }
+        return"(" + Date + ", &" + Amount + ")";
+    }   
 
+   
 }
