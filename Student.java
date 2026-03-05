@@ -22,6 +22,35 @@ public class Student{
         for(Transaction t : transactions){
             s+= t;
         }
-        return s;
+        return s;}
+
+    public int getID(){
+        return idNo;
+        }
+    public double getBalance(){
+        return balance;
+    }
+    public String getName(){
+        return name;
+    }
+    
+    public void addFunds(String date, double amount){
+        balance += amount;
+        transactions.add(new Transaction(date, amount));
+    }
+     public void buyLunch(String date){
+        balance -= 7;
+        transactions.add(new Transaction(date, -7));
+    }
+
+    public ArrayList<Transaction> getTransactionsByDate(String date){
+
+        ArrayList<Transaction> byDate = new ArrayList<Transaction>();
+        for(Transaction t: transactions){
+            if(t.getDate().equals(date)){
+                byDate.add(t);
+            }
+        }
+        return byDate;
     }
 }

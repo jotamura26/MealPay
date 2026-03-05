@@ -1,25 +1,22 @@
 public class Transaction{
-   
-   
-    private double Amount;
-    private String Date;
-    
-    
+
+    private double amount;
+    private String date;
+
     public Transaction(String myDate, double myAmount){
-        Date = myDate;
-        Amount = myAmount;
+        date = myDate;
+        amount = myAmount;
     }
 
     public String getDate(){
-        return Date;
+        return date;
     }
 
     public double getAmount(){
-        return Amount;
+        return amount;
     }
-
     public String toString(){
-        return"(" + Date + ", &" + Amount + ")";
+        return"(" + date + ", &" + amount + ")";
     }   
 
    
